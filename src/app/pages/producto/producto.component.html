@@ -1,0 +1,18 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4">Catálogo de Productos</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let producto of productos">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ producto.imagen }}" class="card-img-top" alt="{{ producto.nombre }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">{{ producto.descripcion }}</p>
+        </div>
+        <div class="card-footer">
+          <span class="text-primary fw-bold">{{ producto.precio | currency:'USD' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
